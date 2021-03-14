@@ -399,7 +399,7 @@ ScriptsOnlyBuild:
     className: VerticalLayoutGroup
   - hash:
       serializedVersion: 2
-      Hash: ba8885765ad8fe055d2176fbae6efcd9
+      Hash: f0c86aaf7aaa0f9fd2afc7335422c10a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerScript
@@ -598,5 +598,4 @@ ScriptsOnlyBuild:
   platform: 5
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Users/carlo/OneDrive/Desktop/Unity Projects/Hello World Tutorial/Tutorial
-    2/Builds/Tutorial 2.exe
+  playerPath: C:/Users/carlo/OneDrive/Desktop/Tutorial 2/Builds/Tutorial 2.exe

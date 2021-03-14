@@ -11,6 +11,8 @@ public class PlayerScript : MonoBehaviour
 
     public Text score;
 
+    public Text winText;
+
     private int scoreValue = 0;
 
     // Start is called before the first frame update
@@ -18,6 +20,8 @@ public class PlayerScript : MonoBehaviour
     {
         rd2d = GetComponent<Rigidbody2D>();
         score.text = scoreValue.ToString();
+        SetScoreText ();
+        winText.text = "";
     }
 
     // Update is called once per frame
@@ -41,6 +45,7 @@ public class PlayerScript : MonoBehaviour
             scoreValue += 1;
             score.text = scoreValue.ToString();
             Destroy(collision.collider.gameObject);
+            SetScoreText();
         }
 
     }
@@ -53,6 +58,15 @@ public class PlayerScript : MonoBehaviour
             {
                 rd2d.AddForce(new Vector2(0, 3), ForceMode2D.Impulse);
             }
+        }
+    }
+
+    void SetScoreText ()
+    {
+        score.text = scoreValue.ToString();
+        if (scoreValue >= 4)
+        {
+            winText.text = "You win, game created by Carlos Velasquez.";
         }
     }
 }
